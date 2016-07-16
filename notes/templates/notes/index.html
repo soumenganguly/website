@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>The Apple Tales</title>
+    <style>
+      a{
+      color: blue;
+      text-decoration: none;
+      }
+      li{
+      color:blue;
+      }
+      b{
+      font-size: 25px;
+      }
+    </style>
+    </head>
+      
+  <body>
+    <div id="sidebar">
+      <nav style="float:left;margin:0;width:25%;background-color:#ff8533;height:100%;color:white;">
+      <br/>
+      <ul>
+	<li><a href="{% url 'index' %}">About</a></li>
+	<ul>
+	  <li><a href="">CV</a></li>
+	  <li><a href="{% url 'contact' %}">Contact</a></li>
+	</ul>
+	<br/>
+	<li>Work</li>
+	<ul>
+	  <li><a href="{% url 'research' %}">Research</a></li>
+	  <li><a href="{% url 'publications' %}">Publications</a></li>
+	  <li><a href="{% url 'projects' %}">Projects</a></li>
+	</ul>
+	<br/>
+	<li>Texts</li>
+	<ul>
+	  <li><a href="{% url 'essays' %}">Essays</a></li>
+	  <li><a href="{% url 'diaries' %}">Diaries</a></li>
+	  <li><a href="{% url 'how-tos' %}">How Tos</a></li>
+	  <li><a href="{% url 'poems' %}">Poems</a></li>
+	</ul>
+	<br/>
+	<li>Photos</li>
+	<ul>
+	  <li><a href="{% url 'trips' %}">Trips</a></li>
+	  <li><a href="{% url 'random' %}">Random</a></li>
+	</ul>
+	</ul>
+      </nav>
+      <article style="float:left;padding-left:20px;">
+	<br />
+	{% block body %}
+    <p><b>Welcome!</b></p>
+	<p>I am Soumen Ganguly, Masters student at the Saarland University in Germany.</p>
+	{% endblock body %}
+    </article>
+    </div>
+  </body>
+</html>
+
+    
